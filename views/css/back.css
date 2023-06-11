@@ -1,0 +1,206 @@
+.recommendations_configuration .configuration_body{
+    display: flex;
+    flex-flow: column;
+    row-gap: 16px;
+}
+.configuration_body .products_configuration{
+    display: grid;
+    grid-template: 64px 1fr / 1fr;
+}
+.products_configuration .config_header{
+    position: sticky;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 1fr;
+    place-items: center;
+    border-bottom: 1px solid #ebebeb;
+    background-color: #fff;
+    padding: 8px;
+}
+.config_header .newProduct,
+.config_header .recommendedCategoryConfig,
+.config_header .categorySortOrder{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 8px 0;
+}
+.newProduct label,
+.recommendedCategoryConfig label,
+.categorySortOrder label{
+    margin: 0;
+}
+.categorySortOrder select{
+    appearance: none;
+    -webkit-appearance: none;
+    display: grid;
+    place-items: center;
+    width: 50%;
+    height: 100%;
+    outline: 1px solid #ebebeb;
+    color: #000;
+    border-radius: 100px;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    position: relative;
+    background-image:
+        linear-gradient(45deg, transparent 50%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px), 
+        calc(100% - 15px) calc(1em + 2px), 
+        calc(100% - 35px) 50%;
+    background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+    background-repeat: no-repeat;
+}
+.categorySortOrder select:focus{
+    background-image:
+        linear-gradient(45deg, gray 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, gray 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 35px) 50%;
+}
+.newProduct input,
+.recommendedCategoryConfig input{
+    appearance: none;
+    display: grid;
+    place-items: center;
+    width: 30%;
+    height: 100%;
+    outline: 1px solid #ebebeb;
+    color: #000;
+    border-radius: 100px;
+    -moz-appearance: textfield;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+}
+.bootstrap .newProduct input:focus
+.bootstrap .recommendedCategoryConfig input:focus{
+    background-color: #fff;
+    outline-color: #cecece;
+}
+.newProduct input::-webkit-outer-spin-button,
+.newProduct input::-webkit-inner-spin-button,
+.recommendedCategoryConfig input::-webkit-outer-spin-button,
+.recommendedCategoryConfig input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.config_header .reload,
+.newProduct .addNewProduct,
+.recommendedCategoryConfig .changeCategory{
+    display: grid;
+    place-items: center;
+    color: #fff;
+    transition: .3s ease-out;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.newProduct .addNewProduct{
+    background-color: #20D000;
+    outline: 2px solid #20D000;
+}
+.config_header .reload,
+.recommendedCategoryConfig .changeCategory{
+    background-color: #0a1f43;
+    outline: 2px solid #0a1f43;
+}
+.newProduct .addNewProduct:hover{
+    background-color: #fff;
+    color: #20D000;
+}
+.config_header .reload:hover,
+.recommendedCategoryConfig .changeCategory:hover{
+    background-color: #fff;
+    color: #0a1f43;
+}
+.currentProducts{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    gap: 8px;
+    padding: 8px;
+    width: 100%;
+}
+.configProduct{
+    display: grid;
+    height: 36px;
+    grid-template-columns: 84px 36px;
+    place-items: center;
+    background: #ff931e;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 100px;
+}
+.deleteProduct{
+    background: #e50000;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 2px solid #e50000;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.deleteProduct::after{
+    content: "✖";
+    font-size: inherit;
+    color: inherit;
+}
+.deleteProduct:hover{
+    background-color: #fff;
+    color: #e50000;
+}
+.messageBox{
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+    color: #fff;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: normal;
+}
+.messageBox.positive{
+    background-color: #198754;
+}
+.messageBox.negative{
+    background-color: #D0342C;
+}
+.messageBox .closeButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+.moduleInstruction{
+    color: #000;
+    font-size: 16px;
+}
