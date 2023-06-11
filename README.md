@@ -1,1 +1,1 @@
-Moduł do framework'u sklepowego prestashop, utworzony w ramach praktyk studenckich z firmą Lastlevel, moduł dostosowany do strony tvokazje.pl
+Widget do framework'u sklepowego prestashop, utworzony w ramach praktyk studenckich z firmą Lastlevel, moduł dostosowany do strony tvokazje.pl
